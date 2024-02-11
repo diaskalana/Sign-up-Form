@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="odinContainer">
+        <div class="odinBranding">
+          <img src="images/odin-lined.png" alt="" />ODIN
+        </div>
+        <div class="imageCredit">
+          Photo by&nbsp;
+          <a href="https://unsplash.com/@haliewestphoto" target="_blank"
+            >Halie West</a
+          >
+          &nbsp;on&nbsp;
+          <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+        </div>
+      </div>
+      <div class="formContainer">
+        <div class="formDescription">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p>You <em>know</em> you want to.</p>
+        </div>
+        <p>Let's do this!</p>
+        <form action="https://httpbin.org/" method="post">
+          <div class="formRow">
+            <div class="formItem">
+              <label for="firstName">FIRST NAME</label>
+              <input
+                required
+                pattern="[A-Za-z]{1,32}"
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="John"
+              />
+              <span class="inputMsg">Enter valid first name</span>
+            </div>
+            <div class="formItem">
+              <label for="lastName">LAST NAME</label>
+              <input
+                required
+                pattern="[A-Za-z]{1,32}"
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Doe"
+              />
+              <span class="inputMsg">Enter valid last name</span>
+            </div>
+          </div>
+          <div class="formRow">
+            <div class="formItem">
+              <label for="email">EMAIL</label>
+              <input
+                autocomplete="email"
+                required
+                id="email"
+                name="email"
+                type="email"
+                placeholder="email@gmail.com"
+              />
+              <span class="inputMsg">Enter valid email address</span>
+            </div>
+            <div class="formItem">
+              <label for="phoneNumber">PHONE NUMBER</label>
+              <input
+                autocomplete="tel"
+                required
+                id="phoneNumber"
+                name="phoneNumber"
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
+                type="tel"
+                placeholder="0123-456-789"
+              />
+              <span class="inputMsg">Enter valid phone number</span>
+            </div>
+          </div>
+          <div class="formRow passwords">
+            <div class="formItem">
+              <label for="password">PASSWORD</label>
+              <input
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                required
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Enter Password"
+              />
+              <span class="inputMsg"
+                >Minimum eight characters, at least one letter and one
+                number</span
+              >
+            </div>
+            <div class="formItem">
+              <label for="confirmPassword">CONFIRM PASSWORD</label>
+              <input
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                required
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                placeholder="Retype Password"
+              />
+              <span class="inputMsg">Passwords do not match</span>
+            </div>
+          </div>
+          <button type="submit">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

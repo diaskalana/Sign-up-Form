@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "norsebold";
+  src: url("./fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("./fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+label,
+input {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.odinContainer {
+  width: 40%;
+  background-image: url("./images/halie-west-25xggax4bSA-unsplash.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+.odinBranding {
+  background-color: rgba(0, 0, 0, 0.404);
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  font-size: 90px;
+  font-family: norsebold, system-ui, -apple-system;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 150px;
+}
+.odinBranding img {
+  height: 1.3em;
+}
+.imageCredit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formContainer {
+  width: 60%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formDescription {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.formRow {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+.formItem {
+  width: 100%;
+}
+.formItem label,
+.inputMsg {
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333333;
+}
+.inputMsg {
+  visibility: hidden;
+}
+.formItem input {
+  width: 100%;
+  padding: 10px 3px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: #33333375 solid 2px;
+  outline: none;
+}
+.formItem input:valid {
+  border-color: #596d48;
+}
+.formItem input:invalid {
+  border-color: red;
+}
+.formItem input:invalid + .inputMsg {
+  visibility: visible;
+  color: red;
+}
+.formItem input:placeholder-shown {
+  border-color: #33333375;
+}
+.formItem input:placeholder-shown + .inputMsg {
+  visibility: hidden;
+}
+button[type="submit"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: #596d48 solid 2px;
+  background-color: #596d48;
+  color: white;
+  cursor: pointer;
+}
+form a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: 600;
+}
